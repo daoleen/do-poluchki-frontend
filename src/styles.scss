@@ -1,1 +1,192 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'styles/variables' as *;
+
+
+html, body {
+  height: 100%;
+  background-color: $white;
+}
+
+
+body {
+  @extend .body;
+  margin: 0;
+  color: $main;
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Andika', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 72px;
+  color: $main;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Andika', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  color: $main;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Andika', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: $main;
+  margin: 0;
+}
+
+h4 {
+  font-family: 'Andika', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  color: $main;
+  margin: 0;
+}
+
+h5 {
+  font-family: 'Andika', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $main;
+  margin: 0;
+}
+
+h6 {
+  font-family: 'Andika', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  color: $main;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button.mdc-button, a.mdc-button {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  line-height: 1.2;
+}
+
+mat-paginator {
+  & .mat-mdc-text-field-wrapper {
+    border-bottom: 1px solid $main;
+  }
+  & .mdc-notched-outline__leading {
+    border: none;
+  }
+  & .mdc-notched-outline__trailing {
+    border: none;
+  }
+}
+
+.default-form-spinner {
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+}
+
+.form-component {
+  background-color: #fffefb;
+}
+
+.form-component-actions {
+  margin: 20px 50px 0 50px;
+  display: flex;
+  justify-content: space-between;
+
+
+  @media ($mobile-screen-condition) {
+    margin: 20px 15px 0 15px;
+  }
+}
+
+app-not-found {
+  width: 600px;
+  display: block;
+  margin: 50px auto;
+
+  @media ($tablet-screen-condition) {
+    width: 500px;
+  }
+  @media ($pda-screen-condition) {
+    width: 450px;
+  }
+  @media ($mobile-screen-condition) {
+    width: 300px;
+  }
+}
+
+.filter-controls {
+  display: flex;
+  padding: 0;
+  align-items: center;
+
+  .btn-filter {
+    color: $outline !important;
+  }
+
+  .btn-reset-filters {
+    color: $main !important;
+  }
+
+  .filter-active {
+    color: $accent !important;
+  }
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+
+  & img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-left: 37px;
+    margin-top: 9px;
+
+    @media ($mobile-screen-condition) {
+      width: 60px;
+      height: 60px;
+      margin: 10px 5px;
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.not-rendered {
+  display: none;
+}

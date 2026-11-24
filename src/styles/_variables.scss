@@ -1,0 +1,73 @@
+$desktop-screen-condition: "min-width: 1920px";
+$notebook-screen-condition: "min-width: 1020px) and (max-width: 1919px";
+$tablet-screen-condition: "min-width: 768px) and (max-width: 1019px";
+$pda-screen-condition: "min-width:576px) and (max-width:767px";
+$mobile-screen-condition: "max-width:575px";
+
+
+.body {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.body2 {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.subtitle {
+  font-family: 'Source Sans Pro', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.subtitle2 {
+  font-family: 'Source Sans Pro', serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.caption {
+  font-family: 'Inter', serif;
+  font-weight: 200;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.small-info-text {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 8px;
+  line-height: 10px;
+}
+
+.header-question {
+  font-size: 17px;
+  width: 17px;
+  height: 17px;
+  color: #CFCFCF;
+  margin-bottom: 12px;
+  margin-left: -4px;
+  cursor: pointer;
+}
+
+
+$primary: #3F51B5;
+$warn: #F44336;
+$accent: #0F92C4;
+$white: #FFFFFF;
+$black: #000000;
+$main: #2F2F2F;
+$outline: #787878;
+$dark-logo-circle: #967F64;
+$light-gray: #CFCFCF;

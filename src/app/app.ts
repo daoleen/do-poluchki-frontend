@@ -7,5 +7,17 @@ import { Component, signal } from '@angular/core';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('frontend');
+
+    get showMainLayout(): boolean {
+        return true;
+    }
+
+    get canShowFooter(): boolean {
+        return true;
+    }
+
+
+    get currentYear(): number {
+        return new Date().getFullYear();
+    }
 }
