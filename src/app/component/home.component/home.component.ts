@@ -2,6 +2,7 @@ import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component } 
 import { HomeService } from '../../service/home.service';
 import { UserService } from '../../service/user.service';
 import { UserPrincipal } from '../../domain/user.principal';
+import { ErrorProcessorService } from '../../service/error.processor.service';
 
 
 @Component({
@@ -14,7 +15,9 @@ import { UserPrincipal } from '../../domain/user.principal';
 export class HomeComponent implements AfterViewInit {
     userPrincipal: UserPrincipal = null;
 
-    constructor(private homeService: HomeService, private userService: UserService, private cdRef: ChangeDetectorRef) {
+    constructor(private homeService: HomeService, private userService: UserService, private errorProcessor: ErrorProcessorService,
+        private cdRef: ChangeDetectorRef)
+    {
     }
 
 
@@ -37,6 +40,8 @@ export class HomeComponent implements AfterViewInit {
     test(): void {
         this.homeService.getHomeResponse().subscribe((response: string) => {
             console.log(response);
+        }, (error: any) => {
+            this.errorProcessor.processError(error);
         });
     }
 }
