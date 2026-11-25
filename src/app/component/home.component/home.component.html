@@ -1,1 +1,14 @@
-<p>home.component works!</p>
+<img src="/assets/logo.png" alt="Logo" />
+куку<br />
+
+
+<div *ngIf="userPrincipal">
+    Привет, {{ userPrincipal.name }}! <br />
+    Твой ID: {{ userPrincipal.sub }} <br />
+    <img *ngIf="userPrincipal.avatar" [src]="userPrincipal.avatar" alt="Аватар" class="rounded-full w-10 h-10">
+</div>
+
+<button *ngIf="!userPrincipal" (click)="login()">Войти</button>
+<button *ngIf="userPrincipal" (click)="logout()">Выйти</button>
+<button (click)="test()">Кнопочка</button><br />
+<a href="/test-secured">Secured page</a>
